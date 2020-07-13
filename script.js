@@ -16,29 +16,29 @@ function generatePassword() {
     var lowerCaseTrue = confirm("Would you like to include lower case characters?");
     if(lowerCaseTrue === true) {
       userArr = userArr.concat(alphaLowerChars);
-    }
+    };
     var upperCaseTrue = confirm("Would you like to include upper case characters?");
     if(upperCaseTrue === true) {
       userArr = userArr.concat(alphaUpperChars);
-    }
+    };
     var numTrue = confirm("Would you like to include numbers?");
     if(numTrue === true) {
       userArr = userArr.concat(numChars);
-    }
+    };
     var specCharTrue = confirm("Would you like to include special characters?");
     if (specCharTrue === true) {
       userArr = userArr.concat(specChars);
-    }
+    };
     var pword = "";  
     for(var i = pwordLength; i > 0; i--) {
       pword += userArr[Math.floor(Math.random() * userArr.length)];
-    }
+    };
     return pword;
     
   } else {
       return "Try Again! You must enter a number between 8 and 128."
-    }
-}
+    };
+};
 
 // Write password to the #password input
 function writePassword() {
@@ -48,7 +48,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
